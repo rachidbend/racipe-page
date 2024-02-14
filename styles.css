@@ -1,0 +1,223 @@
+/* Resets */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Initial setup */
+
+:root {
+  /* colors */
+  --color-nutmeg: hsl(14, 45%, 36%);
+  --color-rasbery: hsl(332, 51%, 32%);
+  --color-background: hsl(30, 54%, 90%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-100: hsl(330, 100%, 98%);
+
+  --color-grey-100: hsl(30, 18%, 87%);
+
+  --color-brown-100: hsl(30, 10%, 34%);
+  --color-brown-200: hsl(24, 5%, 18%);
+
+  --color-blue: hsl(228, 45%, 44%);
+
+  /* fonts */
+  --font-outfit: 'Outfit', sans-serif;
+  --font-young: 'Young Serif', serif;
+}
+
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
+/* Typography */
+
+.heading {
+  font-family: var(--font-young);
+  font-weight: 400;
+}
+
+.heading--main {
+  font-size: 4rem;
+  color: var(--color-brown-200);
+  margin-bottom: 2rem;
+}
+
+.heading--secondary {
+  font-size: 2.8rem;
+  color: var(--color-nutmeg);
+  margin-bottom: 2rem;
+}
+
+.heading--tertiary {
+  font-size: 2rem;
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  color: var(--color-rasbery);
+  margin-bottom: 1.6rem;
+}
+
+.font-weight--700 {
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1.6rem;
+  font-family: var(--font-outfit);
+  font-weight: 500;
+  color: var(--color-brown-100);
+  line-height: 1.5;
+}
+
+/* Images */
+
+.image {
+  width: 100%;
+  border-radius: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* Lists and items */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.list__item {
+  font-family: var(--font-outfit);
+  font-size: 1.6rem;
+  font-weight: 400;
+  list-style-position: outside;
+  color: var(--color-brown-100);
+  padding-left: 2rem;
+  margin-left: 2.6rem;
+}
+
+/* Layout */
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11.2rem 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  padding-bottom: 3.4rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-grey-100);
+}
+
+.main-content {
+  max-width: 73.6rem;
+  padding: 4rem;
+  background-color: var(--color-white);
+  border-radius: 2.4rem;
+}
+
+/* preperation section */
+.preperation__container {
+  margin: 3.4rem 0 2.5rem 0;
+  padding: 2.5rem 2.8rem 3rem 2.8rem;
+  border-radius: 1.2rem;
+  background-color: var(--color-white-100);
+}
+
+.instructions__item {
+  line-height: 1.4;
+}
+
+.instructions__item::marker {
+  font-weight: 700;
+  color: var(--color-nutmeg);
+  font-family: var(--font-outfit);
+}
+
+.nutrition--container {
+  border: none;
+}
+
+/* Table section */
+
+.table {
+  margin-top: 1.4rem;
+  font-size: 1.6rem;
+  font-family: var(--font-outfit);
+  color: var(--color-brown-100);
+  width: 100%;
+}
+
+.table__row {
+  border-bottom: 1px solid var(--color-grey-100);
+  display: block;
+}
+
+.table__row:last-child {
+  border: none;
+}
+
+.table__name {
+  width: 50%;
+  display: inline-block;
+  padding: 1.3rem 0 1.4rem 3.2rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.table__value {
+  color: var(--color-nutmeg);
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Table section */
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: var(--font-outfit);
+}
+.attribution a {
+  color: var(--color-blue);
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .body {
+    background-color: none;
+    display: block;
+    align-items: center;
+    padding: 0;
+  }
+
+  .container {
+    border-bottom: 1px solid var(--color-grey-100);
+    padding-bottom: 3.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .main-content {
+    padding: 0;
+    padding-top: 0;
+    border-radius: 0;
+    padding-bottom: 4rem;
+  }
+  /* this div is used to allow the image to have full width, while the rest of the content to have some padding */
+  .content-container {
+    padding: 0 3.2rem;
+  }
+
+  .image {
+    border-radius: 0;
+    width: 100%;
+  }
+}
